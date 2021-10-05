@@ -13,13 +13,14 @@ function AddArea({onEnter}: Props) {
 
     const handleKeyUp = (e: KeyboardEvent) => {
 
-        if(e.code === 'Enter' && inputText !== ''){
+        console.log(e.code);
+        if((e.code === 'Enter' || e.code === 'NumpadEnter') && inputText !== ''){
             onEnter(inputText);
             setInputText('')
         }
 
     }
-    
+
 
     return (
         <C.Container>
